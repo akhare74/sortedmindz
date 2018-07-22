@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	>
+
+<h:head>
+	<title>Listing Page</title>
+</h:head>
+
+<h:body>
+	<h3>Human Table</h3>
+
+	<hr/>
+
+	<br/>
+	
+    <p:dataTable var="human" value="#{humanuser.listOfHumans}" paginator="true" rows="10"
+                 paginatorTemplate="{RowsPerPageDropdown} {FirstPageLink} {PreviousPageLink} {CurrentPageReport} {NextPageLink} {LastPageLink}"
+                 rowsPerPageTemplate="5,10,15"  id="humanTable">
+      
+        <p:column headerText="First Name" sortBy="#{human.firstName}" filterBy="#{human.firstName}">
+            <h:outputText value="#{human.firstName}" />
+        </p:column>
+        
+        <p:column headerText="Last Name" sortBy="#{human.lastName}" filterBy="#{human.lastName}">
+            <h:outputText value="#{human.lastName}" />
+        </p:column>
+        
+    </p:dataTable>
+
+
+</h:body>
+</html>

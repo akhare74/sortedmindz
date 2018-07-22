@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+
+      xmlns:f="http://java.sun.com/jsf/core"
+
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Search Page</title>
+</head>
+<body>
+
+<h:panelGrid border="1" width="100%" style="background-color:#d6ffd6;">
+<h1>Search Page</h1>
+<br></br>
+</h:panelGrid>
+<br></br>
+<h:panelGrid>
+<h:form>
+
+<br></br>
+<h:outputLabel value="FirstName" ></h:outputLabel>
+<h:inputText style="margin: 5px;" value="#{humanuser.humanEntity.firstName}"></h:inputText>
+<br></br>
+<h:outputLabel value="lastName"></h:outputLabel>
+<h:inputSecret style="margin: 5px;" value="#{humanuser.humanEntity.lastName}" ></h:inputSecret>
+<br></br>
+<br></br>
+<h:commandButton value="submit" style="margin: 5px;" action="#{humanuser.save}"></h:commandButton>
+<h:commandButton value="Back" style="margin: 5px;" action="#{humanuser.backButton}"></h:commandButton>
+<br></br>
+</h:form>
+</h:panelGrid>
+</body>
+</html>

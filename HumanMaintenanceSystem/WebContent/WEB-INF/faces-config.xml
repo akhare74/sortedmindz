@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+    version="2.2">
+    
+    <navigation-rule>
+        <description>Index Page</description>
+        <from-view-id>/index.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{humanuser.searchPage}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/search.xhtml</to-view-id>
+        </navigation-case>
+        
+          </navigation-rule>
+          
+          <navigation-rule>
+          <from-view-id>/search.xhtml</from-view-id>
+          <navigation-case>
+            <from-action>#{humanuser.save}</from-action>
+            <from-outcome>human</from-outcome>
+            <to-view-id>/list_data_table2.xhtml</to-view-id>
+        </navigation-case>
+           
+          </navigation-rule>
+          
+           <navigation-rule>
+          <from-view-id>/search.xhtml</from-view-id>
+          <navigation-case>
+            <from-action>#{humanuser.backButton}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+           
+          </navigation-rule>
+          
+           <navigation-rule>
+          <from-view-id>/display.xhtml</from-view-id>
+          <navigation-case>
+            <from-action>#{humanuser.backButton}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/search.xhtml</to-view-id>
+        </navigation-case>
+           
+          </navigation-rule>
+          
+          <navigation-rule>
+        <description>Index Page</description>
+        <from-view-id>/index.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{humanuser.createPage}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/createuser.xhtml</to-view-id>
+        </navigation-case>
+        
+          </navigation-rule>
+    
+          
+</faces-config>
